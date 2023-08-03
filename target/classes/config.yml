@@ -1,0 +1,191 @@
+############################
+##### Database Setting #####
+############################
+database:
+  user: 'else_junsuk'
+  password: 'qORIoJERjoqDOKp'
+
+##########################
+##### Events Options #####
+##########################
+events:
+  joinAndQuit:
+    firstJoin:
+      status:
+        defaults:
+          level: 1
+          exp: 0
+          maxExp: "%level_up_adding_max_exp%"
+          money: 0
+          statPoint: 3
+  battle:
+    bossBarHealth:
+      # 활성화 시, 항상 BossBarHealth가 표시됩니다.
+      alwaysSelfBar: true
+      # 현재 hp, 최대 hp, hp의 손실과 획득을 포함한 모든 숫자의 소수 자릿수
+      decimal: 2
+      # 보스바 체력 표시 스케일
+      # 2.0 설정 시 체력이 다 찼을 때 40/40으로 표시됩니다.
+      scale: 1.0
+      format:
+        # 보스바 체력의 일반 표시 형식, 지속적으로 표시되는 형식
+        normal: '<gray><b>%cardinal%</b></gray> <gray>%name% <red>[%hp%<dark_gray>/<red>%maxHp%]'
+        # 플레이어 사망 시 변경되는 보스바 체력의 표시 형식
+        dead: '<gray><b>%cardinal%</b></gray> <gray>%name% <red>[ Dead ]'
+        # 플레이어 HP소진 시 변경되는 보스바 체력의 표시 형식
+        hpLost: '<gray><b>%cardinal%</b></gray> <gray>%name% <red>[%hp%<dark_gray>/<red>%maxHp%] <gray>[<red>-%change%<gray>]'
+        # 플레이어 HP획득 시 보스바 체력의 표시 형식
+        hpGain: '<gray><b>%cardinal%</b></gray> <gray>%name% <red>[%hp%<dark_gray>/<red>%maxHp%] <gray>[<green>+%change%<gray>]'
+        # 플레이어의 방향각이 포함된 보스 바가 몇 틱 마다 변경되는지
+      facingRefresh: 20
+      duration:
+        normal: 40
+        zero: 10
+      enemy:
+        enabled: true
+        # 활성화하면 적의 보스 바가 활성 상태일 때 자신의 보스 바를 덮어씁니다.
+        override: true
+        # 보스바 적 체력 표시 스케일
+        # 2.0 설정 시 체력이 다 찼을 때 40/40으로 표시됩니다.
+        scale: 1.0
+        format:
+          dead: '<gray>%enemyName% <red>[ Dead ]'
+          # 적 사망 시 변경되는 보스바 체력의 표시 형식
+          selfDead: '<gray>%enemyName% <red>[%enemyHp%<dark_gray>/<red>%enemyMaxHp%] <gray>[<red>-%enemyChange%<gray>]'
+          # 적 HP소진 시 변경되는 보스바 체력의 표시 형식
+          hpLost: '<gray>%enemyName% <red>[%enemyHp%<dark_gray>/<red>%enemyMaxHp%] <gray>[<red>-%enemyChange%<gray>]'
+          # 적 HP획득 시 보스바 체력의 표시 형식
+          hpGain: '<gray>%enemyName% <red>[%enemyHp%<dark_gray>/<red>%enemyMaxHp%] <gray>[<green>+%enemyChange%<gray>]'
+          # 적의 방향각이 포함된 보스 바가 몇 틱 마다 변경되는지
+        facingRefresh: 20
+        duration:
+          normal: 40
+          zero: 10
+      hiddenWorlds: []
+
+  listPing:
+    motD: "sdf\nsdf"
+
+###########################
+##### Channel Options #####
+###########################
+channel:
+  defaultMaxChannelCount: 5
+  whiteListChannelOPJoinAllow: true
+  channels:
+    1:
+      maxMemberSize: 50
+      enableWhiteList: false
+      blackList:
+        - none
+    2:
+      maxMemberSize: 50
+      enableWhiteList: false
+      blackList:
+        - none
+    3:
+      maxMemberSize: 50
+      enableWhiteList: false
+      blackList:
+        - none
+    4:
+      maxMemberSize: 50
+      enableWhiteList: true
+      whiteList:
+        - c4df9094-f7d7-4afa-b2dd-51b509cda3ef # Else_JunSuk
+      blackList:
+        - none
+    5:
+      maxMemberSize: 50
+      enableWhiteList: true
+      whiteList:
+        - c4df9094-f7d7-4afa-b2dd-51b509cda3ef # Else_JunSuk
+      blackList:
+        - none
+
+
+#############################
+##### Equipment Options #####
+#############################
+equipment:
+  empty:
+    helmet:
+      name: "<white><b><i>HELMET"
+      lore:
+        - "<gray>- 당신의 헬멧은 비어 있습니다."
+    chestplate:
+      name: "<white><b><i>CHEST PLATE"
+      lore:
+        - "<gray>- 당신의 갑옷은 비어 있습니다."
+    leggings:
+      name: "<white><b><i>LEGGINGS"
+      lore:
+        - "<gray>- 당신의 레깅스는 비어 있습니다."
+    boots:
+      name: "<white><b><i>BOOTS"
+      lore:
+        - "<gray>- 당신의 부츠는 비어 있습니다."
+    cape:
+      name: "<white><b><i>CAPE"
+      lore:
+        - "<gray>- 당신의 망토는 비어 있습니다."
+    weapon:
+      name: "\uE0B6 <white><b><i>WEAPON"
+      lore:
+        - "<gray>- 당신의 무기는 비어 있습니다."
+    ring_1:
+      name: "\uE0B5 <white><b><i>FIRST RING"
+      lore:
+        - "<gray>- 당신의 첫번째 반지는 비어 있습니다."
+    ring_2:
+      name: "\uE0B5 <white><b><i>SECOND RING"
+      lore:
+        - "<gray>- 당신의 두번째 반지는 비어 있습니다."
+    ring_3:
+      name: "\uE0B5 <white><b><i>THIRD RING"
+      lore:
+        - "<gray>- 당신의 세번째 반지는 비어 있습니다."
+    charm_1:
+      name: "\uE0B7 <white><b><i>FIRST CHARM"
+      lore:
+        - "<gray>- 당신의 첫번째 부적은 비어 있습니다."
+    charm_2:
+      name: "\uE0B7 <white><b><i>SECOND CHARM"
+      lore:
+        - "<gray>- 당신의 두번째 부적은 비어 있습니다."
+    charm_3:
+      name: "\uE0B7 <white><b><i>THIRD CHARM"
+      lore:
+        - "<gray>- 당신의 세번째 부적은 비어 있습니다."
+    rune_1:
+      name: "<white><b><i>FIRST RUNE"
+      lore:
+        - "<gray>- 당신의 첫번째 룬은 비어 있습니다."
+    rune_2:
+      name: "<white><b><i>SECOND RUNE"
+      lore:
+        - "<gray>- 당신의 두번째 룬은 비어 있습니다."
+    rune_3:
+      name: "<white><b><i>THIRD RUNE"
+      lore:
+        - "<gray>- 당신의 세번째 룬은 비어 있습니다."
+    rune_4:
+      name: "<white><b><i>FOURTH RUNE"
+      lore:
+        - "<gray>- 당신의 네번째 룬은 비어 있습니다."
+    rune_5:
+      name: "<white><b><i>FIFTH RUNE"
+      lore:
+        - "<gray>- 당신의 다섯번째 룬은 비어 있습니다."
+    hp_potion:
+      name: "\uE0B9 <white><b><i>HP POTION"
+      lore:
+        - "<gray>- 현재 장착중인 체력 물약이 없습니다."
+    mp_potion:
+      name: "\uE0C1 <white><b><i>MP POTION"
+      lore:
+        - "<gray>- 현재 장착중인 마나 물약이 없습니다."
+    title:
+      name: "\uE0B8 <white><b><i>TITLE"
+      lore:
+        - "<gray>- 장착한 칭호가 없습니다."

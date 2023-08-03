@@ -1,0 +1,10 @@
+name: MPS
+author: Else_JunSuk
+description: 'Sententia Middle player sequence (Management .Ver)'
+version: '${project.version}'
+main: com.anotherspectrum.smps.MPS
+api-version: '1.20'
+softdepend:
+  - HolographicDisplays
+depend:
+  - ProtocolLib
