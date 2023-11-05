@@ -3,6 +3,9 @@ Sententia Management Project
 <p>해당 라이브러리는 서버의 아이템, 몬스터, 퀘스트 등을 간편하게 추가할 수 있는 인터페이스를 제공합니다.</p>
 <p>또한 해당 라이브러리의 사용 방법을 설명합니다.</p>
 
+## Source
+소스는 master branch를 확인하세요.
+
 ## Monster
 * 이제 MPS라이브러리에서 서버에 새로운 몬스터를 추가하고 수정할 수 있습니다.
 * Monster인터페이스는 SentMonster클래스를 사용하여 확장할 수 있습니다.
